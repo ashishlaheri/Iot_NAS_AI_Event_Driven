@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.egg-info/
+
+# Docker
+.docker/
+
+# Environment
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads & temp
+uploads/
+*.log
+/tmp/
+
+# Models (downloaded at build time)
+*.pt
+*.tflite
+
+# Ceph keys (generated on cluster)
+ceph.conf
+ceph.client.admin.keyring
