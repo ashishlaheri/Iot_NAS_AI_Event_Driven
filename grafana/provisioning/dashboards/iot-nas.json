@@ -11,7 +11,7 @@
       "title": "🔴 Event Enqueue Rate (by Priority)",
       "type": "timeseries",
       "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "expr": "rate(queue_enqueue_total[1m])",
@@ -36,7 +36,7 @@
       "title": "📊 Queue Depth (Current)",
       "type": "gauge",
       "gridPos": { "h": 8, "w": 6, "x": 12, "y": 0 },
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "expr": "queue_depth",
@@ -62,7 +62,7 @@
       "title": "⏱️ Dequeue Rate",
       "type": "stat",
       "gridPos": { "h": 8, "w": 6, "x": 18, "y": 0 },
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "expr": "rate(queue_dequeue_total[1m])",
@@ -87,7 +87,7 @@
       "title": "🧠 Inference Latency (ms)",
       "type": "timeseries",
       "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "expr": "histogram_quantile(0.95, rate(inference_latency_seconds_bucket[5m])) * 1000",
@@ -113,7 +113,7 @@
       "title": "🔗 Forensic Chain Length",
       "type": "stat",
       "gridPos": { "h": 8, "w": 6, "x": 12, "y": 8 },
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "expr": "forensic_chain_length",
@@ -137,7 +137,7 @@
       "title": "🖥️ System CPU Usage",
       "type": "timeseries",
       "gridPos": { "h": 8, "w": 6, "x": 18, "y": 8 },
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "expr": "100 - (avg(rate(node_cpu_seconds_total{mode=\"idle\"}[5m])) * 100)",
@@ -168,7 +168,7 @@
       "title": "💾 System Memory Usage",
       "type": "gauge",
       "gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 },
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "expr": "(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100",
@@ -195,7 +195,7 @@
       "title": "📡 Inference Requests Total",
       "type": "stat",
       "gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 },
-      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "expr": "inference_requests_total",

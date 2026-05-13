@@ -33,7 +33,7 @@ scrape_configs:
   # ---- Infrastructure ----
   - job_name: 'node-exporter'
     static_configs:
-      - targets: ['host.docker.internal:9100']
+      - targets: ['172.31.31.46:9100']
         labels:
           instance: 'node1-nas-core'
 
